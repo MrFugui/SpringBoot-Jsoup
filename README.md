@@ -2,21 +2,12 @@
 
 #### 介绍
 SpringBoot集成jsoup实现网页页面抓取，利用csdn文章进测试
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  修改properties中的csdnurl
+2.  将url换成自己的地址
+3.  启动启动类就开始刷浏览量了
 
 #### 参与贡献
 
