@@ -89,13 +89,13 @@ public class Tool {
 
     public static List<String> getTextId(String url) {
         ArrayList<String> list = new ArrayList<>();
-        HttpRequest httpRequest = HttpRequest.get("https://blog.csdn.net/csdnerM");
+        HttpRequest httpRequest = HttpRequest.get(url);
         cn.hutool.http.HttpResponse execute = httpRequest.execute();
         if (execute.getStatus() == 200) {
             Document document = Jsoup.parse(execute.body());
-            Elements src = document.getElementsByClass("blog-list-box");
+            Elements src = document.getElementsByClass("article-item-box");
             for (Element element : src) {
-                String href = element.child(0).attr("href");
+                String href = element.child(0).getElementsByAttribute("href").attr("href");
                 list.add(href);
             }
         }
